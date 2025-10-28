@@ -1,0 +1,1 @@
+document.writeln("Hello all..How are you all.................")
