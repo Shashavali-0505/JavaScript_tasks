@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29-oct-25</title>
+</head>
+<body>
+    <script>
+        /*
+            Part-1:Concept Tasks
+            1. let / var / const Tasks
+        */ 
+        // i.Create a variable using var, another using let, and one using const. Print all in console.
+        var name = 'Shasha';
+        let age = 21;
+        const city = 'kurnool';
+        console.log(name);
+        console.log(age);
+        console.log(city);
+
+        // ii.Try to reassign values to each variable — note which ones throw an error.
+        name = 'Sai Ram';
+        age = 22;
+        // city = 'holagunda';
+        console.log(name);
+        console.log(age);
+        // console.log(city); Type Error
+
+        /* Description:
+            var -> re-declare and re-assignment is  possible for var 
+            let -> re-declare is not possible and re-assignment is possible for let
+            const -> re-declare and re-assignment is not possible for const and if we re-assign means throws error.
+        */ 
+
+        // iii.Create a block ({ }) and declare a let and a var variable inside. Try accessing them outside the block.
+
+        {
+            var name1 = 'Sam';
+            let age1 = 25;
+            const city1 = 'Nandyal'
+        }
+        console.log(name1);
+        // console.log(age1);
+        // console.log(city1); 
+
+        /*  Description:
+            it throws Reference error for let and const bcoz they are block-scope and can be accessed only inside that block only.
+            var can accessed inside and outside of the block bcoz it is functional scope and it accessed outside and inside of the block also.
+        */ 
+
+        // iv.Declare a variable x with var inside a function. Try to access it outside the function.
+        function accessing_variableX(){
+            var x = 10;
+        }
+        // console.log(x);
+
+        /*  Description:
+            When we initialized a variable with var inside a function if we want to try to access outside then it thorws reference error bcoz in that situation we can access those variables inside of that functional block/body only 
+        */ 
+
+        // 2.Data Types Tasks
+        // v.Create variables for all JS data types: String, Number, Boolean, Null, Undefined, Object, Array, Symbol, BigInt.
+        // vi.Print typeof for each variable.
+        var a = 1;
+        console.log(a);
+        console.log(typeof(a)); // number
+
+        a = 1.5;
+        console.log(a);
+        console.log(typeof(a)); // number
+
+        a = 'Shasha';
+        console.log(a);
+        console.log(typeof(a)); // string
+
+        a = 5 > 6;
+        console.log(a);
+        console.log(typeof(a)); // boolean
+
+        a = null;
+        console.log(a);
+        console.log(typeof(a)); // object
+
+        a = undefined;
+        console.log(a);
+        console.log(typeof(a)); // undefined
+
+        a = undefined-1;
+        console.log(a);
+        console.log(typeof(a)); // number
+
+        a = 567789939393n;
+        console.log(a);
+        console.log(typeof(a)); // bigint
+
+        var arr1 = ['sai','ram','anwar',4546,true,343.54,null,undefined];
+        console.log(arr1[0]);
+        console.log(arr1[2]);
+        console.log(typeof(arr1)); //object
+
+        let employee_details={
+            emp_name: 'Raju',
+            emp_id: 1021,
+            emp_salary: 25000
+        }
+        console.log(employee_details.emp_name); // dot notation
+        console.log(employee_details['emp_id']); // bracket notation
+        console.log(employee_details.emp_salary);
+        console.log(typeof(employee_details)); // object
+        
+
+        let arr2 = [{name:'raghu',marks:89,grade:'B'},{name:'rajaram',marks:95,grade:'A'},{name:'ajju',marks:34,grade:'Fail'}]
+        console.log(arr2[0]['name']);
+        console.log(arr2[0]['marks']);
+        console.log(arr2[0].grade);
+        console.log(arr2[2]['name']);
+        console.log(arr2[2].marks);
+        console.log(arr2[2].grade);
+        console.log(typeof(arr2)) //object
+    </script>
+</body>
+</html>
