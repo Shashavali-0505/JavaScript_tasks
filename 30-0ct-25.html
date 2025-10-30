@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30-oct-25</title>
+</head>
+<body>
+    <script>
+        /*
+            Part 1: let, var, const & Scope — Output-Based Questions (10)
+            Concept Check: Block scope, redeclaration, reassignment, and hoisting.
+        */ 
+
+        var a = 10;
+        let b = 20;
+        const c = 30;
+        console.log(a, b, c); // 10,20,30
+
+        var x = 5;
+        var x = 10;
+        console.log(x); // 10
+
+        let y = 5;
+        y = 10;
+        console.log(y); // 10
+
+        const z = 5;
+        z = 10;
+        console.log(z); // error:Type error
+
+        {
+            var p = 1;
+            let q = 2;
+            const r = 3;
+        }
+        console.log(p); // 1
+        console.log(q); // error:Reference error b is not defined
+
+        for (var i = 0; i < 3; i++) {}
+        console.log(i); // 3
+
+        for (let j = 0; j < 3; j++) {}
+        console.log(j); // error:Reference error j is not defined
+
+        console.log(k);  // undefined
+        var k = 10;
+
+        console.log(l); // ReferenceError: Cannot access 'l' before initialization
+        let l = 10;
+
+        const person = { name: "Noor" }; // doubt
+        person.name = "Jahan";
+        console.log(person.name); // jahan
+
+        /*
+            Part 2: Operators — Output-Based Questions (10)
+            Concept Check: Arithmetic, comparison, logical, bitwise, nullish, and ternary operators.
+
+        */ 
+
+        console.log(5 + "5"); // 55
+
+        console.log("5" - 2);  // “5” - 2  ⇒ 5 - 2 // 3
+
+        console.log(5 == "5"); // true
+        console.log(5 === "5"); // false
+
+        console.log(null == undefined); // true
+        console.log(null === undefined); // false
+
+        console.log(true && false); // false
+        console.log(true || false); // true
+
+        console.log(5 > 3 ? "Yes" : "No"); // Yes
+
+        let e = null ?? "Default"; // doubt
+        console.log(e); // Default
+
+        let f = 0 ?? 5;
+        console.log(f); // 0
+
+        console.log(5 & 3);     /*5 ===> 5 write in binary  0101  and 3 in binary 0011  
+                                                              (& means and ⇒ 1 and 1 is 1 remaining all cases 0)
+                                                                    0 1 0 1
+                                                                    0 0 1 1
+                                                                —------------
+                                                                     0 0 0 1  ===> converts into values it means o/p: 1 */ 
+
+        console.log(5 | 3);     /*5 ===> 5 write in binary  0101  and 3 in binary 0011  
+                                                              (& means and ⇒ 1 and 1 is 1 remaining all cases 0)
+                                                                    0 1 0 1
+                                                                    0 0 1 1
+                                                                —------------
+                                                                     0 1 1 1  ===> converts into values it means o/p: 7 */ 
+
+        let m = 5;
+        m += 3;
+        console.log(m); // 8
+
+    </script>
+</body>
+</html>
