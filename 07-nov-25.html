@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="07-nov-25.css">
+</head>
+<body id="body">
+    <!--🧩 Task 1 – Basic DOM Manipulation
+    Objective: Access and modify text + styles.
+    HTML:
+        <h1 id="heading">Welcome!</h1>
+        <button id="btn">Change Text & Style</button>
+    Task:
+        When the user clicks the button:
+        Change heading text to "Hello Students!"
+        Change color to green and font size to 30px -->
+
+    <div class="first">
+        <h1 id="heading">Welcome!</h1>
+        <button id="btn" onclick="changing_text.innerText = 'Hello Students!',
+        changing_text.style.color = 'green',changing_text.style.fontSize = '50px'
+        ">Change Text & Style</button>
+    </div>
+
+    <div class="second">
+        <div class="btns">
+            <button class="bg-btns" onclick="bagrnd_color.style.backgroundColor = 'red',
+            message.innerText = 'CURRENT COLOR: RED',
+            message.style.fontSize = '20px',
+            message.style.color = 'white'
+            changing_text.style.color = 'white'
+            ">RED</button>
+            <button class="bg-btns" onclick="bagrnd_color.style.backgroundColor = 'blue',
+            message.innerText = 'CURRENT COLOR: BLUE',
+            message.style.fontSize = '20px',
+            message.style.color = 'white',
+            changing_text.style.color = 'white'
+            ">blue</button>
+            <button class="bg-btns" onclick="bagrnd_color.style.backgroundColor = 'green',
+            message.innerText = 'CURRENT COLOR: GREEN',
+            message.style.fontSize = '20px',
+            message.style.color = 'white',
+            changing_text.style.color = 'white'
+            ">green</button>
+            <button class="bg-btns" onclick="bagrnd_color.style.backgroundColor = 'orange',
+            message.innerText = 'CURRENT COLOR: ORANGE',
+            message.style.fontSize = '20px',
+            message.style.color = 'white',
+            changing_text.style.color = 'white'
+            ">orange</button>
+        </div>
+        <h2 id="heading2">Click a Button to Change Background Color of Webpage</h2>
+        <p id="message"></p>
+    </div>
+
+    <div class="third">
+        <button class="bg-btns" id="reset" onclick="changing_text.innerText = 'Welcome!',
+        changing_text.style.color = 'black',
+        changing_text.style.fontSize = '30px',
+        bagrnd_color.style.backgroundColor = 'white',
+        message.innerText = ''
+        ">reset</button>
+    </div>
+
+    <script>
+        
+        let changing_text = document.querySelector('#heading');
+        let changing_color = document.querySelector('#btn');
+        let bagrnd_color = document.querySelector('#body');
+        let message = document.querySelector('#message');
+        let reset = document.querySelector('#reset');
+    </script>
+</body>
+</html>
+
+
