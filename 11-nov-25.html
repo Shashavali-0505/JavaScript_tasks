@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 🎯 Task Title: “Change Text & Color”
+            Description:
+        1. Create an HTML file with one paragraph <p id="msg">Welcome Students</p> 
+        Just print the element
+        Bonus : Change Text and Change Color.
+        2. Use all methods to access the elements and print that elements
+
+        Bonus Task:
+        Use querySelector() to select the element. 
+    -->
+    <p class="para">
+        Wellcome Students!!!
+    </p>
+
+    <script>
+        document.querySelector(".para").textContent = "PARAGRAPGH";
+        document.querySelector(".para").style.color = 'lightblue';
+        document.querySelector(".para").style.backgroundColor = 'black';
+        document.querySelector(".para").style.fontSize = '30px';
+        document.querySelector(".para").style.fontWeight = '900';
+        document.querySelector(".para").style.border = '5px solid red';
+        document.querySelector(".para").style.textAlign = 'center';
+        document.querySelector(".para").style.padding = '20px';
+
+    /* 🧩 2️⃣ Scope – Output-Based Questions
+    🔹 Output-Based Questions */
+    // 1.
+        var a = 10;
+        function test() {
+        var a = 20;
+        console.log(a); // 20
+        }
+        test();
+        console.log(a); // 10
+    // 2.
+        let x = 5;
+        {
+            let x = 10;
+            console.log(x); // 10
+        }
+        console.log(x); // 5
+    // 3.
+        function outer() {
+        var x = 10;
+        function inner() {
+            console.log(x); // 10
+        }
+        inner();
+        }
+        outer();
+    // 4.
+        if (true) {
+        var a = 1;
+        let b = 2;
+        const c = 3;
+        }
+        console.log(a); // 1
+        console.log(typeof b); // undefined
+    // 5.
+        console.log(a); // undefined
+        var a = 5;
+        console.log(b); // b can not access before initialization
+        let b = 10;
+    // 6.
+        function demo() {
+        if (true) {
+            var a = 10;
+            let b = 20;
+        }
+        console.log(a); // 10
+        console.log(b); // b is not defined
+        }
+        demo();
+    // 7.
+        function sayHi(name = "User") {
+        return "Hi " + name;
+        }
+        console.log(sayHi()); // hi user
+        console.log(sayHi("Noorjahan")); // hi noorjahan
+    // 8.
+        greet();
+        function greet() {
+        console.log("Hello!"); // hello!
+        }
+    // 9.
+        var greet = function() {
+        console.log("Hi there!"); // hi there!
+        };
+        greet();
+    // 10.
+        let a = 10;
+        function show() {
+        console.log(a); // a can not access before initialization
+        let a = 20;
+        }
+        show();
+    // 11.
+        (function() {
+        console.log("IIFE executed"); // IIFE executed
+        })();
+    // 12.
+        var greet = function() {
+        console.log("Hello"); // hello
+        };
+        greet();
+    // 13.
+        sayHello();
+        function sayHello() {
+        console.log("Hi!"); // Hi!
+        }
+    // 14.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
