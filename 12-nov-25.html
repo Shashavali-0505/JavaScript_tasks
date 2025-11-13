@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toss choose</title>
+    <link rel="stylesheet" href="12-nov-25.css">
+</head>
+<body>
+    <div class="container-1">
+        <h1 class=" heading-h1">
+        Heads or Tails
+        </h1>
+        <p class="para1">
+            Flip a virtual coin with this online and free app.
+        </p>
+        <p class="para2">
+            Heads: <span class="head-counter">0</span>
+            Tails: <span class="tail-counter">0</span>
+        </p>
+        <div class="coin-displaying">
+            <div class="toss"  id="head-tail">
+                <h2 class="toss-side">Coin</h2>
+            </div>
+        </div>
+        <button class="coin-btn" onclick="tossed()">
+            Flip the coin!
+        </button>
+
+        <p class="para3">
+            (Click on the button to flip the coin!)
+        </p>
+
+        <button class="reset-btn" onclick="deleting()">
+            reset
+        </button>
+    </div>
+
+    <script>
+        let head_count = 0;
+        let tail_count = 0;
+        function tossed(){
+            let random_number = Math.random();
+            let rounded_value = Math.round(random_number);
+            
+            // console.log(random_number);
+            // console.log(rounded_value);
+            if (rounded_value == 0){
+                head_count+=1;
+                document.querySelector(".toss-side").innerHTML = "heads";
+                document.querySelector(".head-counter").innerHTML = head_count;
+                document.querySelector("#head-tail").style.backgroundColor = "rgb(239, 76, 103)";
+                document.querySelector(".coin-displaying").style.backgroundColor = "rgb(239, 76, 103)"
+                
+            }else{
+                tail_count+=1
+                document.querySelector(".tail-counter").innerHTML = tail_count;
+                document.querySelector(".toss-side").innerHTML = "tails";
+                document.querySelector("#head-tail").style.backgroundColor = "black";
+                document.querySelector(".coin-displaying").style.backgroundColor = "black"
+            }
+        }
+
+        function deleting(){
+            document.querySelector(".head-counter").textContent = 0;
+            document.querySelector(".tail-counter").textContent = 0;
+            document.querySelector(".toss-side").textContent = "toss";
+            document.querySelector(".coin-displaying").style.backgroundColor = "rgb(239, 76, 103)"
+            document.querySelector(".toss").style.backgroundColor = "rgb(239, 76, 103)";
+        }
+    </script>
+</body>
+</html>
