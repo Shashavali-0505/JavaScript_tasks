@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Summary</title>
+    <style>
+        .cart-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cart-value{
+            width: max-content;
+            height: max-content;
+            padding: 10px 20px;
+            background-color: lightgreen;
+            color: black;
+            text-transform: uppercase;
+            margin: 20px;
+            border-radius: 50px;
+            border: none;
+            font-size: medium;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+        }
+        .wishlist-value{
+            width: max-content;
+            height: max-content;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            border: 1px solid;
+            margin: 20px;
+            border-radius: 50px;
+            font-size: medium;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            transition: all 0.5s ease-in-out;
+
+        }
+        .cart-value:hover,.wishlist-value:hover{
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <div class="cart-container">
+        <button class="cart-value" onclick="
+        cartQuantity++;
+        document.querySelector('.cart-summary').innerText = `Your Bag has ${cartQuantity} Items`;
+        ">Add to cart</button>
+
+        <button class="wishlist-value" onclick="
+        cartQuantity--;
+        document.querySelector('.cart-summary').innerText = `Your Bag has ${cartQuantity} Items`;
+        ">Move to wishlist</button>
+
+        <button class="cart-value" onclick="
+        cartQuantity+=2;
+        document.querySelector('.cart-summary').innerText = `Your Bag has ${cartQuantity} Items`;
+        ">Add 1+1 Sale Item</button>
+    </div>
+
+    <h1 class="cart-summary" style="text-align: center;"></h1>
+
+
+    <script>
+        let cartQuantity = 0;
+        document.querySelector('.cart-summary').innerText = `Your Bag has ${cartQuantity} Items`;
+    </script>
+</body>
+</html>
