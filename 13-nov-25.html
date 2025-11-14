@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+
+
+    <script>
+        // creating element in js
+        let h1_element = document.createElement("h1");
+
+
+        let btn1_element = document.createElement("button");
+        let anc1_element = document.createElement("a");
+        let reset_btn = document.createElement("button");
+
+        h1_element.innerHTML = "heading 1 element";
+
+        // console.log(h1_element)
+        h1_element.style.color = "orange";
+        h1_element.style.fontSize = "35px";
+        h1_element.style.textAlign = "center";
+        h1_element.style.textTransform = "uppercase";
+        h1_element.style.letterSpacing = "5px";
+        h1_element.style.backgroundColor = "black";
+        h1_element.style.padding = "20px";
+        document.body.appendChild(h1_element);
+
+        
+        btn1_element.textContent = "change-styles";
+        btn1_element.style.padding = "10px";
+        btn1_element.style.color = "white";
+        btn1_element.style.backgroundColor = "orange";
+        btn1_element.style.width = "max-content";
+        btn1_element.style.fontSize = "2rem";
+        btn1_element.style.border = "none";
+        btn1_element.style.borderRadius = "8px";
+        btn1_element.style.marginLeft = "20%";
+        btn1_element.style.fontFamily = "serif";
+        btn1_element.style.textTransform = "uppercase";
+        btn1_element.style.cursor = "pointer";
+        btn1_element.style.fontWeight = "600";
+        btn1_element.onclick = () => {
+            h1_element.style.color = "black";
+            h1_element.style.backgroundColor = "orange";
+            h1_element.style.fontFamily = 'verdana';
+        }
+        document.body.appendChild(btn1_element);
+        
+        anc1_element.textContent = "change-styles";
+        anc1_element.style.padding = "10px 20px";
+        anc1_element.style.color = "white";
+        anc1_element.style.backgroundColor = "blue";
+        // anc1_element.style.width = "200px";
+        anc1_element.style.fontSize = "2rem";
+        anc1_element.style.borderRadius = "8px"
+        
+        anc1_element.style.marginLeft = "5%"
+        anc1_element.style.textTransform = "uppercase";
+        anc1_element.style.cursor = "pointer";
+        anc1_element.style.fontWeight = "600";
+        anc1_element.onclick = () => {
+            h1_element.style.color = "black";
+            h1_element.style.backgroundColor = "blue";
+            h1_element.style.fontFamily = 'verdana';
+        }
+        document.body.appendChild(anc1_element);
+
+        reset_btn.textContent = "reset";
+        reset_btn.style.textTransform = "uppercase";
+        reset_btn.style.padding = "10px";
+        reset_btn.style.color = "red";
+        reset_btn.style.marginLeft = "5%"
+        reset_btn.style.width = "200px";
+        reset_btn.style.fontSize = "2rem";
+        reset_btn.style.borderRadius = "8px";
+        reset_btn.style.borderRadius = "10px"
+        reset_btn.style.cursor = "pointer";
+        reset_btn.style.fontWeight = "600";
+        reset_btn.onclick = () => {
+            h1_element.style.color = "orange";
+            h1_element.style.backgroundColor = "black";
+        }
+        document.body.append(reset_btn);
+
+    </script>
+
+    <!-- <script>
+        let input_box = document.createElement("input");
+        let add_btn = document.createElement("button");
+        let remove_btn = document.createElement("button");
+        let list_students = document.createElement("ul");
+        input_box.placeholder = "Enter your name here:"
+        input_box.type = "text";
+        input_box.value = +prompt('enter your name:')
+
+        add_btn.innerText = "Add to list";
+        add_btn.onclick = () => {
+            
+            let adding_to_list = document.createElement("li");
+            adding_to_list.innerText = input_box.value;
+            console.log(adding_to_list);
+            document.body.list_students.appendChild(adding_to_list);
+            
+        }
+        remove_btn.innerText = "Remove from list";
+        document.body.appendChild(input_box);
+        document.body.appendChild(add_btn);
+        document.body.appendChild(remove_btn);
+        document.body.appendChild(list_students);
+
+
+
+    </script> -->
+</body>
+</html>
